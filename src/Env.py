@@ -177,7 +177,7 @@ class IndustrialDatasetScenarioProvider():
 
 
 def get_scenario(name):
-    compat = '/home/liujiping/dataset/' + name + ".csv"
+    compat = '../dataset/' + name + ".csv"
     if data_dict.get(name) is None:
         data_dict[name] = pd.read_csv(compat, sep=';', parse_dates=['LastRun'])
     return IndustrialDatasetScenarioProvider(name=name)
