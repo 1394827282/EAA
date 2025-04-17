@@ -91,7 +91,6 @@ def process_scenario_short(agent, sc, preprocess, unexecuted):
     scenario_metadata = sc.get_ta_metadata()
     if agent.single_testcases:
         for row in sc.testcases():
-            # if len(row['LastResults']) == 0:
             x = preprocess(row, scenario_metadata, agent.histlen)
             agent.setshort(x, row['CalcPrio'])
 
